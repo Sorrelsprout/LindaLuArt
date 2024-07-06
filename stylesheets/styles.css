@@ -54,11 +54,25 @@ h5 {
   font-size: 1rem;
 }
 
+.button {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  padding: 1rem;
+  background: #161E2E;
+  color: #677DA7;
+  text-decoration: none;
+}
+
 /* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 #landing {
   display: none;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   max-width: unset;
@@ -123,9 +137,17 @@ nav #logo {
 }
 
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+#homeContent section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
 #homeContent section h2 {
   text-align: center;
   margin-bottom: 2rem;
+}
+#homeContent section .button {
+  margin: 2rem auto;
 }
 #homeContent .gallery {
   display: grid;
