@@ -5,6 +5,7 @@ $darkestBlue: #0d0f16;
 $darkBlue: #11151E;
 $medBlue: #161E2E;
 $lightBlue: #677DA7;
+$lightBlue30: #677DA750;
 
 $bodyMaxWidth: 1400px;
 $mobileBreakpoint: 768px;
@@ -65,7 +66,7 @@ h5 { font-size: 1rem; }
 /* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 #landing {
-    // display: none; 
+    display: none; 
     display: block;
     position: fixed;
     top: 0;
@@ -138,10 +139,12 @@ nav {
     section {
         display: flex;
         flex-direction: column;
-        margin-bottom: $pageMargin;
+        margin: $pageMargin 0;
+        padding-bottom: $pageMargin;
+        &:not(:last-of-type) { border-bottom: solid 1px $lightBlue30; }
         h2 { 
             text-align: center;
-            margin-bottom: $pageMargin;
+            margin: $pageMargin 0;
         }
         .button { margin: $pageMargin auto; }
     }
