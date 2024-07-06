@@ -1,23 +1,73 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Krona+One&display=swap');
 
-$darkBlue: #161E2E;
+$darkestBlue: #0d0f16;
+$darkBlue: #11151E;
+$medBlue: #161E2E;
+$lightBlue: #677DA7;
+
+$bodyMaxWidth: 1400px;
+$pageMargin: 2rem;
+
+@mixin fontTitle {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+@mixin fontBody {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.68em;
+    color: $lightBlue;
+    font-size: 0.925rem;
+}
+
+@mixin buttonStyles {
+
+}
+
+/* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 html { scroll-behavior: smooth; }
 
 body { 
-    background: $darkBlue;
+    display: flex;
+    flex-direction: column;
+    background: $darkestBlue;
+    @include fontBody();
+    > * { 
+        margin: auto;
+        width: 100%;
+        max-width: $bodyMaxWidth; 
+        padding: $pageMargin;
+        background: $darkBlue;
+    }
 }
+
+h1, h2, h3, h4, h5, h6 { @include fontTitle(); }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+
 
 /* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 #landing {
+    display: none; 
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
+    max-width: unset; 
     width: 100vw;
     height: 100vh;
-    background: #000a;
 
     &::before, &::after {
         content: '';
@@ -33,8 +83,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        z-index: -1;
-        filter: blur(4px);
+        filter: blur(4px) brightness(50%);
     }
     &::after {
         $logoWidth: 12rem;
@@ -49,7 +98,76 @@ body {
     }
 }
 
+/* NAV •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+nav {
+    height: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background: $medBlue;
+    @include fontTitle();
+    font-size: 0.75rem;
+
+    .triplebar { 
+        margin-right: auto;
+        font-size: 2.5rem;
+     }
+
+    #logo {
+        $logoWidth: 3rem;
+        position: absolute;
+        width: $logoWidth;
+        aspect-ratio: 1 / 1;
+        background-image: url("../images/about/logoNav.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+#homeContent {
+    section {
+        h2 { 
+            text-align: center;
+            margin-bottom: $pageMargin;
+        }
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $pageMargin;
+
+        > * {
+            padding: 1rem; 
+            background: $medBlue; 
+            border-radius: 0.5rem;
+            overflow: hidden;
+            
+            img {
+                display: block;
+                width: calc(100% + 2rem);
+                aspect-ratio: 1 / 1;
+                background: $lightBlue;
+                margin: -1rem -1rem 1rem -1rem;
+            }
+
+            .itemTitle, .itemPrice {
+                margin-bottom: 1rem;
+                text-align: center;
+                @include fontTitle(); 
+            }
+
+            .itemPrice { 
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
 
 /* FOOTER ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 

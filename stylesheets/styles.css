@@ -1,22 +1,69 @@
 @charset "UTF-8";
 @import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Krona+One&display=swap");
+/* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #161E2E;
+  display: flex;
+  flex-direction: column;
+  background: #0d0f16;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.68em;
+  color: #677DA7;
+  font-size: 0.925rem;
+}
+body > * {
+  margin: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem;
+  background: #11151E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 /* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 #landing {
+  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
+  max-width: unset;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6666666667);
 }
 #landing::before, #landing::after {
   content: "";
@@ -32,8 +79,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: -1;
-  filter: blur(4px);
+  filter: blur(4px) brightness(50%);
 }
 #landing::after {
   top: calc(50% - 6rem);
@@ -46,7 +92,73 @@ body {
   background-size: contain;
 }
 
+/* NAV •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+nav {
+  height: 5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background: #161E2E;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+}
+nav .triplebar {
+  margin-right: auto;
+  font-size: 2.5rem;
+}
+nav #logo {
+  position: absolute;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/about/logoNav.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+#homeContent section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#homeContent .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+#homeContent .gallery > * {
+  padding: 1rem;
+  background: #161E2E;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+#homeContent .gallery > * img {
+  display: block;
+  width: calc(100% + 2rem);
+  aspect-ratio: 1/1;
+  background: #677DA7;
+  margin: -1rem -1rem 1rem -1rem;
+}
+#homeContent .gallery > * .itemTitle, #homeContent .gallery > * .itemPrice {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+#homeContent .gallery > * .itemPrice {
+  font-size: 0.75rem;
+}
+
 /* FOOTER ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 /*# sourceMappingURL=styles.css.map */
