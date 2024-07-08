@@ -20,7 +20,7 @@ body {
 body > * {
   margin: auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   padding: 2rem;
   background: #11151E;
 }
@@ -215,11 +215,17 @@ nav .mobileMenu {
 #homeContent section .button {
   margin: 2rem auto;
 }
+#homeContent section .inch_2 .itemsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 #homeContent .itemsGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem auto;
+  width: auto;
+  max-width: 52rem;
 }
 @media screen and (max-width: 768px) {
   #homeContent .itemsGrid {
@@ -262,12 +268,28 @@ nav .mobileMenu {
 }
 
 /* CUSTOM CONTENT ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-.strawberrySkies .gallery .featuredImage {
-  background-image: url("../images/potsBig/strawberry.jpeg");
+.strawberry .gallery .featuredImage {
+  background-image: url("../images/pots5.5/strawberry1.jpg");
+}
+
+.hood .gallery .featuredImage {
+  background-image: url("../images/pots4.5/hood1.jpg");
 }
 
 .korok .gallery .featuredImage {
-  background-image: url("../images/potsSmall/korok.jpeg");
+  background-image: url("../images/pots2/korok1.jpg");
+}
+
+.fungi .gallery .featuredImage {
+  background-image: url("../images/pots2/violetCort1.jpg");
+}
+
+.insects .gallery .featuredImage {
+  background-image: url("../images/pots2/insects1.jpg");
+}
+
+.scenery .gallery .featuredImage {
+  background-image: url("../images/pots2/forestPark1.jpg");
 }
 
 /* GALLERY •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -290,6 +312,7 @@ nav .mobileMenu {
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem;
+  cursor: zoom-in;
 }
 @media screen and (max-width: 50rem) {
   .gallery .featuredImage {
