@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     // $(".imgRotation").click(function(){ $(this).toggleClass("engaged"); }) // Zoom image when clicked
 
-    setTimeout(function() { $('#landing').fadeOut('fast'); }, 2000); // splash page
+    setTimeout(function() { $('#landing').fadeOut('fast'); }, 1500); // splash page
 
     $(".featuredImage").click(function(){  // Zoom image when clicked
         $(this).toggleClass("engaged");

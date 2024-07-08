@@ -303,11 +303,6 @@ nav {
         align-items: center;
         gap: 0.75rem;
         padding: $pageMargin calc($pageMargin / 2);
-        // @media screen and (max-width: $mobileBreakpoint) {
-        //     gap: 1rem;
-        //     padding: 0 1rem;
-        // }
-
         .imageSelector, .prev, .next {
             background: $lightBlue;
             border-radius: 100%;
@@ -321,14 +316,15 @@ nav {
         }
         .prev, .next {
             border-radius: 0;
-            width: 1.25rem;
-            height: 1.25rem;
+            width: 0.75rem;
+            height: 0.75rem;
             background: #fff0;
             background-image: url("../images/about/arrow.svg");
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             opacity: 0.5;
+            margin: 0 0.5rem;
             &:hover { opacity: 0.25; }
             &.next { transform: rotate(-180deg); }
         }
