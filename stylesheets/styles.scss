@@ -159,7 +159,7 @@ nav {
         @include logoSetup();
         width: $socialsWidth;
         background-image: url("../images/socials/patreon.svg");
-        @media screen and (min-width: $mobileBreakpoint + 1) { margin-top: calc($socialsWidth / -2); }
+        @media screen and (min-width: calc($mobileBreakpoint + 1px)) { margin-top: calc($socialsWidth / -2); }
     }
 
     a { 
