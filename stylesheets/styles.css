@@ -253,6 +253,7 @@ nav .mobileMenu {
   letter-spacing: 0.15em;
 }
 #homeContent .itemsGrid > * .itemPrice {
+  display: none;
   font-size: 0.75rem;
 }
 #homeContent .itemsGrid > * .itemDescription {
