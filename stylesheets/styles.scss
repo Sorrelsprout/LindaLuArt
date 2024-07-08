@@ -184,6 +184,46 @@ nav {
 }
 
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+
+.contactPopup {
+    display: none;
+    position: fixed;
+    background: #0008;
+    top: $navHeight;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - $navHeight);
+    &.engaged { display: block; }
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        // top: calc(50vh + ($navHeight / 2));
+        top: 50vh;
+        left: calc(50% - $pageMargin);
+        transform: translate(-50%, calc(-50% - $navHeight));
+        width: calc(100% - ($pageMargin * 2));
+        max-width: 25rem;
+        margin: $pageMargin;
+        padding: $pageMargin;
+        background: $medBlue;
+        align-items: center;
+        border-radius: 0.5rem;
+
+        > * {
+            text-align: center;
+            &:not(:last-child) { margin-bottom: $pageMargin; }
+        }
+        p { 
+            @include fontBody(); 
+            letter-spacing: normal;
+            text-transform: none;
+        }
+    }
+}
+
+/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
 #homeContent {
     padding-top: $navHeight;

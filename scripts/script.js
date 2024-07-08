@@ -23,5 +23,7 @@ $(document).ready(function(){
     });
 
     $("#about").click(function(){ alert("🛠️ In progress! 🛠️"); });
-    $("#contact").click(function(){ alert("🛠️ In progress! 🛠️"); });
+    $("#contact").click(function(){ 
+        $(".contactPopup").toggleClass("engaged");
+    });
 })
