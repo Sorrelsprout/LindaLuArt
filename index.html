@@ -13,18 +13,19 @@
     <link href="stylesheets/styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7d54d2caeb.js" crossorigin="anonymous"></script>
-    <!-- <script src="stylesheets/script.js"></script> -->
+    <script src="scripts/script.js"></script>
 </head>
 
 <body>
     <nav>
         <div class="triplebar">≡</div>
         <span class="mobileMenu">
-            <a id="about">About</a>
+            <a id="patreon" href="https://www.patreon.com/LindaLuArt" rel="noreferrer" target="_blank" title="Patreon"></a>
         </span>
-        <div id="logo" class="logo" title="logo"></div>
+        <div id="logo" class="logo" title="Welcome!"></div>
         <span class="mobileMenu">
-            <a id="contact">Contact</a>
+            <a id="about" rel="noreferrer" title="About" href="#/">About</a>
+            <a id="contact" rel="noreferrer" title="Contact" href="#/">Contact</a>
         </span>
     </nav>
 
@@ -37,63 +38,180 @@
     <div id="homeContent">
         <section>
             <h2>5.5" Pots</h2>
-            <div class="gallery">
-                <div>
-                    <img src="" alt="">
+            <div class="itemsGrid">
+                <div class="strawberrySkies">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="potsBig/strawberry.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsBig/strawberry1.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsBig/strawberry2.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsBig/strawberry3.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsBig/strawberry4.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsBig/strawberry5.jpeg"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Strawberry Skies</h4>
                     <p class="itemPrice">$80</p>
                     <p class="itemDescription">Strawberries against a pink sky, ready to plant your favorite Mt. Hood strawberries</p>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div style="display:none;">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="____"></div>
+                            <div class="imageSelector" data-fileName="____"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Blackberries</h4>
                     <p class="itemPrice">$80</p>
                     <p class="itemDescription">Mmmm... invasive</p>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div style="display:none;">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="____"></div>
+                            <div class="imageSelector" data-fileName="____"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Rose Garden</h4>
                     <p class="itemPrice">$80</p>
                     <p class="itemDescription">Under the gazebo in the International Rose Test Garden</p>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div style="display:none;">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="____"></div>
+                            <div class="imageSelector" data-fileName="____"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Native Wildflowers</h4>
                     <p class="itemPrice">$80</p>
                     <p class="itemDescription">Local native PNW wildflowers!</p>
                 </div>
             </div>
-            <a class="button" href="#/">View All</a>
+            <a style="display:none;" class="button" href="#/">View All</a>
         </section>
 
 
         <section>
             <h2>2" Pots</h2>
-            <div class="gallery">
-                <div>
-                    <img src="" alt="">
+            <div class="itemsGrid">
+                <div class="korok">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="potsSmall/korok.jpeg"></div>
+                            <div class="imageSelector" data-fileName="potsSmall/korok2.jpeg"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Forest Spirits</h4>
                     <p class="itemPrice">$15</p>
                     <p class="itemDescription">Ya ha ha!</p>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div style="display:none;">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="____"></div>
+                            <div class="imageSelector" data-fileName="____"></div>
+                        <div class="next"></div></div>
+                    </div>
                     <h4 class="itemTitle">Native Insects</h4>
                     <p class="itemPrice">$15</p>
                     <p class="itemDescription">Insects found in the PNW</p>
                 </div>
             </div>
-            <a class="button" href="#/">View All</a>
+            <a style="display:none;" class="button" href="#/">View All</a>
         </section>
     </div>
 
     <!-- FOOTER ------------------------------------------------------------------------------------------------->
 
     <footer>
-
+        <section>
+            <p>Thank you for visiting!</p>
+        </section>
     </footer>
     
     <span style="display: none;">Copyrighted Website. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Linda Lu with appropriate and specific direction to the original content.</span>
 </body>
+
+<script>
+    // Using image selectors
+    let imageSelectors = document.querySelectorAll(".imageSelector");
+    imageSelectors.forEach(function (el) {
+        el.addEventListener("click", function(){
+            el.parentElement.querySelectorAll(".imageSelector").forEach(function (image) {
+                image.classList.remove("current");
+            })
+            el.classList.add("current");
+            let featuredImage = el.parentElement.parentElement.querySelector(".featuredImage");
+            // let AAA = "url('./images/" + el.getAttribute('data-fileName') + "')";
+
+            let src = "./images/" + el.getAttribute('data-fileName');
+            let str = 'url("' + src + '")';
+            featuredImage.style.backgroundImage = str;
+            console.log(str);
+        });
+    });
+
+    // Using arrows
+    let galleryToggles = document.querySelectorAll(".imageController");
+    let galleryTogglePrev = document.querySelectorAll(".imageController .prev");
+    let galleryToggleNext = document.querySelectorAll(".imageController .next");
+
+    galleryTogglePrev.forEach(function (el) {
+        el.addEventListener("click", function(){ navigateGallery(el, -1); });
+    });
+    galleryToggleNext.forEach(function (el) {
+        el.addEventListener("click", function(){ navigateGallery(el, 1); });
+    });
+
+    function navigateGallery(e, direction) {
+        let currentImageSelector = e.parentElement;
+        let currentGallery = currentImageSelector.parentElement;
+        let currentImagePosition = currentGallery.querySelector(".imageSelector.current");
+        let allImages = currentGallery.querySelectorAll(".imageSelector");
+
+        if(direction === 1) { // move forwards
+            let targetNext = currentImagePosition.nextElementSibling;
+            let firstImage = allImages[0];
+            if(typeof targetNext !== "undefined" && typeof targetNext !== null) {
+                if (!targetNext.classList.contains("imageSelector")) {
+                    // Next image unavailable, loop back to start
+                    navGal(firstImage);
+                } else { navGal(targetNext); }
+            }
+        }
+
+        if(direction === -1) { // move backwards
+            let targetPrev = currentImagePosition.previousElementSibling;
+            let lastImage = allImages[allImages.length - 1];
+            if(typeof targetPrev !== "undefined" && typeof targetPrev !== null) {
+                if (!targetPrev.classList.contains("imageSelector")) {
+                    // previous image unavailable, loop to last image
+                    navGal(lastImage);
+                } else { navGal(targetPrev); }
+            }
+        }
+
+        function navGal(targetType) {
+            currentGallery.querySelectorAll(".imageSelector").forEach(function (image) {
+                image.classList.remove("current");
+            })
+            targetType.classList.add("current");
+            let featuredImage = currentGallery.querySelector(".featuredImage");
+            // let AAA = "url('./images/" + targetType.getAttribute('data-fileName') + "')";
+
+            let src = "./images/" + targetType.getAttribute('data-fileName');
+            let str = 'url("' + src + '")';
+            featuredImage.style.backgroundImage = str;
+            console.log(str);
+        }
+    }
+</script>
 
 </html>
