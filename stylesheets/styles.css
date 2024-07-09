@@ -114,6 +114,11 @@ h5 {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 768px) {
+  #landing::after {
+    top: calc(50% - 12rem);
+  }
+}
 
 /* NAV •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 nav {

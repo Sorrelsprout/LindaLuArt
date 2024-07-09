@@ -39,7 +39,6 @@ $pageMargin: 2rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    // fill: $lightBlue;
 }
 
 /* GENERAL •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -119,6 +118,7 @@ h5 { font-size: 1rem; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        @media screen and (max-width: $mobileBreakpoint) { top: calc(50% - $logoWidth)}; 
     }
 }
 
