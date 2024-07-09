@@ -223,7 +223,7 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50vh;
+        top: calc(50vh - ($navHeight / 2));
         left: calc(50% - $pageMargin);
         transform: translate(-50%, calc(-50% - $navHeight));
         width: calc(100% - ($pageMargin * 2));
