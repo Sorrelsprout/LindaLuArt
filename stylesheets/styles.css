@@ -263,6 +263,12 @@ nav .mobileMenu {
   align-items: center;
   border-radius: 0.5rem;
 }
+@media screen and (max-width: 768px) {
+  #navlinksPopup .content {
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+}
 #navlinksPopup .content > * {
   text-align: center;
 }

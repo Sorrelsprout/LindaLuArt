@@ -238,7 +238,10 @@ nav {
         background: $medBlue;
         align-items: center;
         border-radius: 0.5rem;
-        // @media screen and (max-width: $mobileBreakpoint) { top: calc(50vh + ($navHeight / 2)); }
+        @media screen and (max-width: $mobileBreakpoint) { 
+            top: 0;
+            transform: translate(-50%, 0);
+        }
         
         > * {
             text-align: center;
