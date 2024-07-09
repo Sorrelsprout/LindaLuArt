@@ -323,6 +323,10 @@ nav .mobileMenu {
   -webkit-box-shadow: 0 0 0px 1000px #11151E inset;
   -webkit-text-fill-color: #7f94b9 !important;
 }
+.contactForm .formGroupContainer .formGroup input:focus, .contactForm .formGroupContainer .formGroup textarea:focus {
+  outline: none;
+  border: 1px solid #7f94b9;
+}
 .contactForm .formGroupContainer .formGroup textarea {
   min-height: 8rem;
   resize: vertical;

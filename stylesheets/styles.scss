@@ -287,6 +287,10 @@ nav {
                     -webkit-box-shadow: 0 0 0px 1000px $darkBlue inset;
                     -webkit-text-fill-color: $veryLightBlue !important;
                 }
+                &:focus {
+                    outline: none;
+                    border: 1px solid $veryLightBlue;
+                }
             }
             textarea { 
                 min-height: 8rem;
