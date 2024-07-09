@@ -207,6 +207,15 @@ nav .mobileMenu {
 #navlinksPopup.about .content.aboutContent {
   display: flex;
 }
+#navlinksPopup.about .content.aboutContent img {
+  width: 8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#navlinksPopup.about .content.aboutContent p {
+  text-align: left;
+}
 #navlinksPopup.contact .content.contactContent {
   display: flex;
 }
@@ -218,7 +227,7 @@ nav .mobileMenu {
   left: calc(50% - 2rem);
   transform: translate(-50%, calc(-50% - 5rem));
   width: calc(100% - 4rem);
-  max-width: 25rem;
+  max-width: 32rem;
   margin: 2rem;
   padding: 2rem;
   background: #161E2E;
