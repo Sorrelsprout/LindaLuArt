@@ -186,6 +186,9 @@ nav a:hover {
 nav .mobileMenu {
   display: flex;
   gap: 2rem;
+  border-right: 1px solid #11151E;
+  border-bottom: 1px solid #11151E;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   nav .mobileMenu {
@@ -205,6 +208,10 @@ nav .mobileMenu {
   }
   nav .mobileMenu:first-of-type {
     top: 12.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  nav .mobileMenu:last-of-type {
+    border-bottom: none;
   }
 }
 
@@ -245,7 +252,7 @@ nav .mobileMenu {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: calc(50vh - 2.5rem);
+  top: 50vh;
   left: calc(50% - 2rem);
   transform: translate(-50%, calc(-50% - 5rem));
   width: calc(100% - 4rem);

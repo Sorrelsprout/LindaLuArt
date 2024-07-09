@@ -177,6 +177,9 @@ nav {
     .mobileMenu {
         display: flex;
         gap: 2rem;
+        border-right: 1px solid $darkBlue;
+        border-bottom: 1px solid $darkBlue;
+        z-index: 1;
         @media screen and (max-width: $mobileBreakpoint) { 
             display: none;
             flex-direction: column;
@@ -189,9 +192,11 @@ nav {
             width: 100%;
             max-width: 10rem;
             &.expanded { display: flex; }
-            &:first-of-type {
-                top: 12.5rem;
+            &:first-of-type { 
+                top: 12.5rem; 
+                border-bottom-right-radius: 0.5rem;
             }
+            &:last-of-type { border-bottom: none; }
         }
     }
 }
@@ -223,7 +228,7 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: calc(50vh - ($navHeight / 2));
+        top: 50vh;
         left: calc(50% - $pageMargin);
         transform: translate(-50%, calc(-50% - $navHeight));
         width: calc(100% - ($pageMargin * 2));
@@ -233,7 +238,8 @@ nav {
         background: $medBlue;
         align-items: center;
         border-radius: 0.5rem;
-
+        // @media screen and (max-width: $mobileBreakpoint) { top: calc(50vh + ($navHeight / 2)); }
+        
         > * {
             text-align: center;
             &:not(:last-child) { margin-bottom: $pageMargin; }
