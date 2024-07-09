@@ -6,6 +6,7 @@ $darkBlue: #11151E;
 $medBlue: #161E2E;
 $lightBlue: #677DA7;
 $lightBlue30: #677DA750;
+$veryLightBlue: #7f94b9;
 
 $navHeight: 5rem;
 $bodyMaxWidth: 1600px;
@@ -237,6 +238,10 @@ nav {
             @include fontBody(); 
             letter-spacing: normal;
             text-transform: none;
+        }
+        a { 
+            font-weight: 800;
+            color: $veryLightBlue; 
         }
     }
 }

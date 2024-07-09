@@ -269,6 +269,10 @@ nav .mobileMenu {
   letter-spacing: normal;
   text-transform: none;
 }
+#navlinksPopup .content a {
+  font-weight: 800;
+  color: #7f94b9;
+}
 
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 #homeContent {
