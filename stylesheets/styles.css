@@ -191,9 +191,8 @@ nav .mobileMenu {
   }
 }
 
-/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-.contactPopup {
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+#navlinksPopup {
   display: none;
   position: fixed;
   background: rgba(0, 0, 0, 0.5333333333);
@@ -202,11 +201,17 @@ nav .mobileMenu {
   width: 100vw;
   height: calc(100vh - 5rem);
 }
-.contactPopup.engaged {
+#navlinksPopup.engaged {
   display: block;
 }
-.contactPopup .content {
+#navlinksPopup.about .content.aboutContent {
   display: flex;
+}
+#navlinksPopup.contact .content.contactContent {
+  display: flex;
+}
+#navlinksPopup .content {
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 50vh;
@@ -220,13 +225,13 @@ nav .mobileMenu {
   align-items: center;
   border-radius: 0.5rem;
 }
-.contactPopup .content > * {
+#navlinksPopup .content > * {
   text-align: center;
 }
-.contactPopup .content > *:not(:last-child) {
+#navlinksPopup .content > *:not(:last-child) {
   margin-bottom: 2rem;
 }
-.contactPopup .content p {
+#navlinksPopup .content p {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
   font-style: normal;

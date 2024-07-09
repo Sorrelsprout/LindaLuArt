@@ -183,10 +183,9 @@ nav {
     }
 }
 
-/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-/* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+/* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
-.contactPopup {
+#navlinksPopup {
     display: none;
     position: fixed;
     background: #0008;
@@ -195,11 +194,12 @@ nav {
     width: 100vw;
     height: calc(100vh - $navHeight);
     &.engaged { display: block; }
+    &.about { .content.aboutContent { display: flex; } }
+    &.contact { .content.contactContent { display: flex; } }
     .content {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: absolute;
-        // top: calc(50vh + ($navHeight / 2));
         top: 50vh;
         left: calc(50% - $pageMargin);
         transform: translate(-50%, calc(-50% - $navHeight));

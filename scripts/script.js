@@ -22,8 +22,28 @@ $(document).ready(function(){
         $(this).parent().toggleClass("fullScreenImg");
     });
 
-    $("#about").click(function(){ alert("🛠️ In progress! 🛠️"); });
+
+    // NAV LINKS -----------------------------------------------------------------------------
+    $("#about").click(function(){ 
+        removeNavLinksAll();
+        $("#navlinksPopup").addClass("engaged");
+        $("#navlinksPopup").addClass("about");
+     });
     $("#contact").click(function(){ 
-        $(".contactPopup").toggleClass("engaged");
+        removeNavLinksAll();
+        $("#navlinksPopup").addClass("engaged");
+        $("#navlinksPopup").addClass("contact");
     });
+
+    $("#navlinksPopup").on("click",function(e){
+        if (e.target.id !== 'navlinksPopup') return;
+        $("#navlinksPopup").removeClass("engaged");
+        removeNavLinksAll();
+    })
+
+    function removeNavLinksAll() {
+        $("#navlinksPopup").removeClass("about");
+        $("#navlinksPopup").removeClass("contact");
+    }
+
 })
