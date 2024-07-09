@@ -66,6 +66,9 @@ h5 {
   background: #161E2E;
   color: #677DA7;
   text-decoration: none;
+  border: none;
+  transition: 0.25s ease;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -274,6 +277,71 @@ nav .mobileMenu {
   color: #7f94b9;
 }
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contactForm .formGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.contactForm .formGroupContainer * {
+  text-align: left;
+}
+.contactForm .formGroupContainer .formGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.contactForm .formGroupContainer .formGroup label {
+  position: absolute;
+  top: -0.35rem;
+  left: 0.35rem;
+  padding: 0 0.35rem;
+  background: linear-gradient(to bottom, #161E2E, #161E2E 40%, #11151E 40%, #11151E 100%);
+  border-radius: 0.25rem;
+}
+.contactForm .formGroupContainer .formGroup input, .contactForm .formGroupContainer .formGroup textarea {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.68em;
+  color: #677DA7;
+  font-size: 0.925rem;
+  flex: 1;
+  padding: 1.05rem 0.7rem 0.7rem 0.7rem;
+  color: #7f94b9;
+  background: #11151E;
+  border: 1px solid rgba(103, 125, 167, 0.5019607843);
+  border-radius: 0.25rem;
+}
+.contactForm .formGroupContainer .formGroup input:-webkit-autofill, .contactForm .formGroupContainer .formGroup textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #11151E inset;
+  -webkit-text-fill-color: #7f94b9 !important;
+}
+.contactForm .formGroupContainer .formGroup textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+.contactForm .formGroupContainer .formGroup .required::after {
+  content: "*";
+  display: inline-block;
+  margin-left: 0.125rem;
+  color: #f87d58;
+}
+.contactForm .formSubmit {
+  color: #7f94b9;
+  background: rgba(103, 125, 167, 0.5019607843);
+  margin: auto;
+}
+.contactForm .formSubmit:hover {
+  opacity: 0.5;
+}
+
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 #homeContent {
   padding-top: 5rem;
@@ -285,7 +353,7 @@ nav .mobileMenu {
 }
 #homeContent section:not(:last-of-type) {
   padding-bottom: 4rem;
-  border-bottom: solid 1px rgba(103, 125, 167, 0.3137254902);
+  border-bottom: solid 1px rgba(103, 125, 167, 0.5019607843);
   margin: 2rem 0 4rem 0;
 }
 #homeContent section:last-of-type {
@@ -467,10 +535,10 @@ footer section {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
-  border-top: solid 1px rgba(103, 125, 167, 0.3137254902);
+  border-top: solid 1px rgba(103, 125, 167, 0.5019607843);
 }
 footer section p {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=styles.css.map */

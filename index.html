@@ -53,8 +53,33 @@
 
             <div class="content contactContent">
                 <h2>Contact</h2>
-                <p>Email: <a id="email" rel="noreferrer" title="Email" href="mailto:lindaluarts@gmail.com">lindaluarts@gmail.com</a></p>
                 <p>Please reach out for commission inquiries and questions!</p>
+                <p style="display:none;">Email: <a id="email" rel="noreferrer" title="Email" href="mailto:lindaluarts@gmail.com">lindaluarts@gmail.com</a></p>
+
+                <form class="contactForm" action="https://api.web3forms.com/submit" method="POST" target="_blank">
+                    <input type="hidden" name="access_key" value="405f68c5-314f-4c36-bbbf-2d5d79697d67" />
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Lindaluart.com" />
+                    <input type="hidden" name="from_name" value="Lindaluart.com" />
+                    <div class="formGroupContainer">
+                        <div class="formGroup">
+                            <label for="name" class="form-label">Name<span class="required"></span></label>
+                            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                        </div>
+                        <div class="formGroup">
+                            <label for="email" class="form-label">Email<span class="required"></span></label>
+                            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+                        </div>
+                        <div class="formGroup">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(123) 456-7890" type="text" />
+                        </div>
+                        <div class="formGroup">
+                            <label for="message" class="form-label">Message<span class="required"></span></label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required ></textarea>
+                        </div>
+                    </div>
+                    <button class="formSubmit button" type="submit">Send Message</button>
+                </form>
             </div>
         </div>
     </nav>
