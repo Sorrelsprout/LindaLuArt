@@ -24,6 +24,10 @@ body > * {
   padding: 2rem;
   background: #11151E;
 }
+body *::selection {
+  background: rgba(103, 125, 167, 0.5019607843);
+  color: #7f94b9;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Krona One", sans-serif;
