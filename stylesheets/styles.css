@@ -441,8 +441,12 @@ nav .mobileMenu {
 }
 
 /* CUSTOM CONTENT ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+.roseGarden .gallery .featuredImage {
+  background-image: url("../images/pots5.5/roseGarden/roseGarden1.jpg");
+}
+
 .strawberry .gallery .featuredImage {
-  background-image: url("../images/pots5.5/strawberry1.jpg");
+  background-image: url("../images/pots5.5/strawberry/strawberry1.jpg");
 }
 
 .hood .gallery .featuredImage {
@@ -522,8 +526,8 @@ nav .mobileMenu {
 .gallery .imageController .imageSelector, .gallery .imageController .prev, .gallery .imageController .next {
   background: #677DA7;
   border-radius: 100%;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.4rem;
+  aspect-ratio: 1/1;
   opacity: 0.5;
   cursor: pointer;
 }
