@@ -457,6 +457,10 @@ nav .mobileMenu {
   background-image: url("../images/pots4.5/hood1.jpg");
 }
 
+.wildflowers .gallery .featuredImage {
+  background-image: url("../images/pots3.5/wildflowers/wildflowers6.jpg");
+}
+
 .korok .gallery .featuredImage {
   background-image: url("../images/pots2/korok1.jpg");
 }
