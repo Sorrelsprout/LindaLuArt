@@ -81,49 +81,6 @@ h5 {
   }
 }
 
-/* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
-#landing {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  max-width: unset;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-}
-#landing::before, #landing::after {
-  content: "";
-  position: absolute;
-}
-#landing::before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/about/landing.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  filter: blur(4px) brightness(50%);
-}
-#landing::after {
-  top: calc(50% - 6rem);
-  left: calc(50% - 6rem);
-  width: 12rem;
-  aspect-ratio: 1/1;
-  background-image: url("../images/about/logoLanding.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media screen and (max-width: 768px) {
-  #landing::after {
-    top: calc(50% - 12rem);
-  }
-}
-
 /* NAV •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 nav {
   position: fixed;
@@ -222,6 +179,30 @@ nav .mobileMenu {
   nav .mobileMenu:last-of-type {
     border-bottom: none;
   }
+}
+
+/* LANDING •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+#announcement {
+  margin-top: 5rem;
+  padding: 0.5rem 2rem;
+  background: #0d0f16;
+  color: #677DA7;
+  font-size: 0.95rem;
+  text-align: center;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5333333333);
+}
+@media screen and (max-width: 768px) {
+  #announcement {
+    max-width: 26.75rem;
+  }
+}
+#announcement a {
+  color: #7f94b9;
+  font-weight: 600;
+  text-decoration: none;
+}
+#announcement a:hover {
+  opacity: 0.5;
 }
 
 /* CONTACT POPUP •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -425,6 +406,14 @@ nav .mobileMenu {
     max-width: 25rem;
   }
 }
+#homeContent .itemsGrid > * a {
+  color: #7f94b9;
+  font-weight: 600;
+  text-decoration: none;
+}
+#homeContent .itemsGrid > * a:hover {
+  opacity: 0.5;
+}
 #homeContent .itemsGrid > * .itemTitle, #homeContent .itemsGrid > * .itemPrice {
   margin-bottom: 1rem;
   text-align: center;
@@ -437,7 +426,31 @@ nav .mobileMenu {
 }
 #homeContent .itemsGrid > * .itemPrice {
   display: none;
+  position: relative;
+  margin: 0 auto 0.75rem auto;
   font-size: 0.75rem;
+}
+#homeContent .itemsGrid > * .itemPrice.sold {
+  display: block;
+  transform: translateX(-2rem);
+  color: #f87d58;
+  opacity: 0.5;
+}
+#homeContent .itemsGrid > * .itemPrice.sold::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background: #f87d58;
+  top: calc(50% - 0.0625rem);
+  left: 0;
+}
+#homeContent .itemsGrid > * .itemPrice.sold::after {
+  content: "sold";
+  position: absolute;
+  margin: -0.4rem 0 0 0.5rem;
+  border: 0.125rem solid #f87d58;
+  padding: 0.25rem;
 }
 #homeContent .itemsGrid > * .itemDescription {
   display: inline-block;
@@ -453,8 +466,12 @@ nav .mobileMenu {
   background-image: url("../images/pots5.5/strawberry/strawberry1.jpg");
 }
 
+.vineMaple .gallery .featuredImage {
+  background-image: url("../images/pots4.5/vineMaple/vineMaple1.jpg");
+}
+
 .hood .gallery .featuredImage {
-  background-image: url("../images/pots4.5/hood1.jpg");
+  background-image: url("../images/pots4.5/hood/hood1.jpg");
 }
 
 .chanterellesPine .gallery .featuredImage {
