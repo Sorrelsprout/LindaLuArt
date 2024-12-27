@@ -181,9 +181,29 @@
             <a style="display:none;" class="button" href="#/">View All</a>
         </section>
 
-        <section id="inch_4.5">
+        <section id="inch_4">
             <h2>4" Pots</h2>
             <div class="itemsGrid">
+                <div class="oregonGrape">
+                    <div class="gallery">
+                        <div class="featuredImage""></div>
+                        <div class="imageController"><div class="prev"></div>
+                            <div class="imageSelector current" data-fileName="pots4/oregonGrape/oregonGrape1.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape2.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape3.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape4.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape5.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape6.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape7.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape8.jpg"></div>
+                            <div class="imageSelector" data-fileName="pots4/oregonGrape/oregonGrape9.jpg"></div>
+                        <div class="next"></div></div>
+                    </div>
+                    <h4 class="itemTitle">Oregon Grape</h4>
+                    <p class="itemPrice">$65</p>
+                    <p class="itemDescription">Oregon Grape (Berberis / Mahonia aquifolium), also known as the holly-leafed barberry, is native to North America and is the state flower of Oregon. Its berries are quite sour but edible, and when sweetened is used in jams!</p>
+                </div>
+
                 <div class="chanterellesPine">
                     <div class="gallery">
                         <div class="featuredImage""></div>
@@ -383,12 +403,9 @@
             })
             targetType.classList.add("current");
             let featuredImage = currentGallery.querySelector(".featuredImage");
-            // let AAA = "url('./images/" + targetType.getAttribute('data-fileName') + "')";
-
             let src = "./images/" + targetType.getAttribute('data-fileName');
             let str = 'url("' + src + '")';
             featuredImage.style.backgroundImage = str;
-            console.log(str);
         }
     }
 </script>
