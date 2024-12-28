@@ -346,7 +346,7 @@ nav {
             background: $medBlue; 
             border-radius: 0.5rem;
             overflow: hidden;
-            margin: auto;
+            margin: 0 auto;
             width: 25rem;
             @media screen and (max-width: $mobileBreakpoint) { 
                 width: calc(100vw - ($pageMargin * 2));
@@ -418,6 +418,7 @@ nav {
 
 .wildflowers .gallery .featuredImage { background-image: url("../images/pots3.5/wildflowers/wildflowers6.jpg"); }
 
+.snowberries .gallery .featuredImage { background-image: url("../images/pots2/snowberries/snowberries1.jpg"); }
 .korok .gallery .featuredImage { background-image: url("../images/pots2/korok1.jpg"); }
 .fungi .gallery .featuredImage { background-image: url("../images/pots2/violetCort1.jpg"); }
 .insects .gallery .featuredImage { background-image: url("../images/pots2/insects1.jpg"); }
