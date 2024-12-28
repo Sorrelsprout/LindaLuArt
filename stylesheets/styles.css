@@ -383,7 +383,8 @@ nav .mobileMenu {
   gap: 2rem;
   margin: 2rem auto;
   width: auto;
-  max-width: 52rem;
+  max-width: 80rem;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   #homeContent .itemsGrid {
@@ -397,7 +398,6 @@ nav .mobileMenu {
   background: #161E2E;
   border-radius: 0.5rem;
   overflow: hidden;
-  margin: 0 auto;
   width: 25rem;
 }
 @media screen and (max-width: 768px) {

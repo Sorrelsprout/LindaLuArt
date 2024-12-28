@@ -336,7 +336,8 @@ nav {
         gap: $pageMargin;
         margin: calc($pageMargin) auto;
         width: auto;
-        max-width: 52rem;
+        max-width: 80rem;
+        justify-content: center;
         @media screen and (max-width: $mobileBreakpoint) { flex-direction: column; }
 
         > * {
@@ -346,7 +347,7 @@ nav {
             background: $medBlue; 
             border-radius: 0.5rem;
             overflow: hidden;
-            margin: 0 auto;
+            // margin: 0 auto;
             width: 25rem;
             @media screen and (max-width: $mobileBreakpoint) { 
                 width: calc(100vw - ($pageMargin * 2));
