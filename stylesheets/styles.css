@@ -379,6 +379,11 @@ nav .mobileMenu {
   z-index: 1;
   overflow-y: scroll;
 }
+@media screen and (max-width: 768px) {
+  .contactContent .commissionInfo {
+    max-height: calc(100vh - 9rem);
+  }
+}
 .contactContent .commissionInfo > * {
   color: #677DA7;
 }
@@ -410,6 +415,21 @@ nav .mobileMenu {
 }
 .contactContent .commissionInfo .button:hover {
   opacity: 0.5;
+}
+.contactContent .commissionInfo .button:hover::after {
+  opacity: 1;
+}
+.contactContent .commissionInfo .button::after {
+  content: "";
+  display: block;
+  top: 1rem;
+  left: 0.6666666667rem;
+  position: fixed;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  background: url("../images/about/arrow.svg") center no-repeat;
+  background-size: contain;
+  opacity: 0.75;
 }
 
 /* HOMEPAGE ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -493,13 +513,19 @@ nav .mobileMenu {
   margin: 0 auto 0.75rem auto;
   font-size: 0.75rem;
 }
-#homeContent .itemsGrid > * .itemPrice.sold {
+#homeContent .itemsGrid > * .itemDescription {
+  display: inline-block;
+  margin: auto;
+}
+
+/* SOLD POTS •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+#homeContent .itemsGrid > .sold .itemPrice {
   display: block;
   transform: translateX(-2rem);
   color: #f87d58;
   opacity: 0.5;
 }
-#homeContent .itemsGrid > * .itemPrice.sold::before {
+#homeContent .itemsGrid > .sold .itemPrice::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -508,16 +534,12 @@ nav .mobileMenu {
   top: calc(50% - 0.0625rem);
   left: 0;
 }
-#homeContent .itemsGrid > * .itemPrice.sold::after {
+#homeContent .itemsGrid > .sold .itemPrice::after {
   content: "sold";
   position: absolute;
   margin: -0.4rem 0 0 0.5rem;
   border: 0.125rem solid #f87d58;
   padding: 0.25rem;
-}
-#homeContent .itemsGrid > * .itemDescription {
-  display: inline-block;
-  margin: auto;
 }
 
 /* CUSTOM CONTENT ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
