@@ -29,7 +29,7 @@ $(document).ready(function(){
         removeNavLinksAll();
         $("#navlinksPopup").addClass("engaged");
         $("#navlinksPopup").addClass("about");
-     });
+    });
     $("#contact").click(function(){ 
         removeNavLinksAll();
         $("#navlinksPopup").addClass("engaged");
@@ -45,6 +45,7 @@ $(document).ready(function(){
     function removeNavLinksAll() {
         $("#navlinksPopup").removeClass("about");
         $("#navlinksPopup").removeClass("contact");
+        $(".contactContent").removeClass("showCommissionInfo");
     }
 
     // GALLERY NAVIGATION ----------------------------------------------------------------------
@@ -118,4 +119,10 @@ $(document).ready(function(){
             featuredImage.style.backgroundImage = str;
         }
     }
+
+    // COMISSION INFO --------------------------------------------------------------------------
+
+    $(".commissionInfoToggle").click(function(){ $(this).parent().parent().toggleClass("showCommissionInfo"); });
+    $("#commissionInfoButton").click(function(){ $(this).parent().parent().removeClass("showCommissionInfo"); });
+
 })
