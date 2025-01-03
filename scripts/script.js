@@ -45,7 +45,7 @@ $(document).ready(function(){
     function removeNavLinksAll() {
         $("#navlinksPopup").removeClass("about");
         $("#navlinksPopup").removeClass("contact");
-        $(".contactContent").removeClass("showCommissionInfo");
+        commissionReset();
     }
 
     // GALLERY NAVIGATION ----------------------------------------------------------------------
@@ -124,5 +124,10 @@ $(document).ready(function(){
 
     $(".commissionInfoToggle").click(function(){ $(this).parent().parent().toggleClass("showCommissionInfo"); });
     $("#commissionInfoButton").click(function(){ $(this).parent().parent().removeClass("showCommissionInfo"); });
+
+    function commissionReset() {
+        $(".contactContent").removeClass("showCommissionInfo");
+        // $(".commissionInfo").scrollTop = 0; //TODO: NOT WORKING
+    }
 
 })
