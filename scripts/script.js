@@ -16,6 +16,13 @@ $(document).ready(function(){
 
     setTimeout(function() { $('#landing').fadeOut('fast'); }, 1500); // splash page
 
+    // SOLD POTS TOGGLER ---------------------------------------------------------------------
+    $("#toggleSold").click(function() {
+        $(this).toggleClass("hideSoldPots");
+        $("#homeContent").toggleClass("hideSoldPots");
+    });
+
+
     // ZOOM IMG ------------------------------------------------------------------------------
 
     $(".featuredImage").click(function(){  // Zoom image when clicked

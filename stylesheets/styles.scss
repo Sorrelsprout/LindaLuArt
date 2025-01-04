@@ -453,9 +453,43 @@ nav {
 
 /* SOLD POTS •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
 
-#homeContent .itemsGrid > .sold {
-    // display: none;
-    .itemPrice { 
+#toggleSoldContainer {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    color: $lightBlue;
+    font-size: 0.85rem;
+    opacity: 0.65;
+    #toggleSold { 
+        position: relative;
+        width: 2.5rem;
+        height: 1.5rem;
+        border: 1px solid $lightBlue50;
+        border-radius: 1000px;
+        background: #000;
+        &::after { 
+            content: "";
+            position: absolute;
+            right: calc(100% - (0.25rem + 1px + 1rem));
+            display: block;
+            width: 1rem;
+            aspect-ratio: 1 / 1;
+            background: $lightBlue;
+            border-radius: 100%;
+            margin: calc(0.25rem - 1px);
+            transition: 0.25s ease;
+            cursor: pointer;
+        }
+        &.hideSoldPots::after { right: 0; }
+    }
+}
+
+#homeContent {
+    &.hideSoldPots { .allPotsSold, .itemsGrid > .sold { display: none; } }
+    .itemsGrid > .sold .itemPrice { 
         display: block;
         transform: translateX(-2rem); // translates leftwards, half the width of "sold" text
         color: $warning;
