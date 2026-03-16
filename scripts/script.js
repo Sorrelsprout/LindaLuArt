@@ -47,7 +47,7 @@ $(document).ready(function(){
         if (e.target.id !== 'navlinksPopup') return;
         $("#navlinksPopup").removeClass("engaged");
         removeNavLinksAll();
-    })
+    });
 
     function removeNavLinksAll() {
         $("#navlinksPopup").removeClass("about");
