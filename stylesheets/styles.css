@@ -587,6 +587,10 @@ nav .mobileMenu {
 }
 
 /* CUSTOM CONTENT ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
+.cherryBlossoms .gallery .featuredImage {
+  background-image: url("../images/pots5.5/cherryBlossoms/cherryBlossoms1.jpeg");
+}
+
 .roseGarden .gallery .featuredImage {
   background-image: url("../images/pots5.5/roseGarden/roseGarden1.jpg");
 }
