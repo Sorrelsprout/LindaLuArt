@@ -440,6 +440,11 @@ nav .mobileMenu {
 #homeContent {
   padding-top: 5rem;
 }
+#homeContent.hideSoldPots section:nth-last-child(1 of :not(.allPotsSold)) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 #homeContent section {
   display: flex;
   flex-direction: column;
