@@ -573,8 +573,11 @@ nav .mobileMenu {
   transform: translateX(-2rem);
   color: #f87d58;
   opacity: 0.5;
+  font-size: 0;
+  color: transparent;
 }
 #homeContent .itemsGrid > .sold .itemPrice::before {
+  display: none;
   content: "";
   position: absolute;
   width: 100%;
@@ -585,10 +588,13 @@ nav .mobileMenu {
 }
 #homeContent .itemsGrid > .sold .itemPrice::after {
   content: "sold";
-  position: absolute;
-  margin: -0.4rem 0 0 0.5rem;
   border: 0.125rem solid #f87d58;
   padding: 0.25rem;
+  position: relative;
+  left: 50%;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #f87d58;
 }
 
 /* CUSTOM CONTENT ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••*/
@@ -626,6 +632,14 @@ nav .mobileMenu {
 
 .wildflowers .gallery .featuredImage {
   background-image: url("../images/pots3.5/wildflowers/wildflowers6.jpg");
+}
+
+.paintbrushes .gallery .featuredImage {
+  background-image: url("../images/pots2/paintbrushes/paintbrushes.jpg");
+}
+
+.cherryBlossomsSm .gallery .featuredImage {
+  background-image: url("../images/pots2/cherryBlossomsSm.jpg");
 }
 
 .snowberries .gallery .featuredImage {

@@ -504,7 +504,11 @@ nav {
         transform: translateX(-2rem); // translates leftwards, half the width of "sold" text
         color: $warning;
         opacity: 0.5;
+        // Hide the price
+        font-size: 0;
+        color: transparent;
         &::before { // strikethrough
+            display: none;
             content: "";
             position: absolute;
             width: 100%;
@@ -515,10 +519,16 @@ nav {
         }
         &::after { // width is 4rem;
             content: "sold";
-            position: absolute;
-            margin: -0.4rem 0 0 0.5rem;
+            // position: absolute;
+            // margin: -0.4rem 0 0 0.5rem;
             border: 0.125rem solid $warning;
             padding: 0.25rem;
+
+            position: relative;
+            left: 50%;
+            font-size: 1rem;
+            line-height: 1rem;
+            color: $warning;
         }
     }
 }
@@ -540,6 +550,8 @@ nav {
 .chanterellesPine .gallery .featuredImage { background-image: url("../images/pots3.75/chanterellesPine/chanterellesPine1.jpg"); }
 .wildflowers .gallery .featuredImage { background-image: url("../images/pots3.5/wildflowers/wildflowers6.jpg"); }
 
+.paintbrushes .gallery .featuredImage { background-image: url("../images/pots2/paintbrushes/paintbrushes.jpg"); }
+.cherryBlossomsSm .gallery .featuredImage { background-image: url("../images/pots2/cherryBlossomsSm.jpg"); }
 .snowberries .gallery .featuredImage { background-image: url("../images/pots2/snowberries/snowberries1.jpg"); }
 .korok .gallery .featuredImage { background-image: url("../images/pots2/korok1.jpg"); }
 .fungi .gallery .featuredImage { background-image: url("../images/pots2/violetCort1.jpg"); }
