@@ -1,3 +1,5 @@
+/* sass --watch stylesheets/styles.scss:stylesheets/styles.css */
+
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Krona+One&display=swap');
 
@@ -501,7 +503,7 @@ nav {
     &.hideSoldPots { .allPotsSold, .itemsGrid > .sold { display: none; } }
     .itemsGrid > .sold .itemPrice { 
         display: block;
-        transform: translateX(-2rem); // translates leftwards, half the width of "sold" text
+        // transform: translateX(-2rem); // translates leftwards, half the width of "sold" text
         color: $warning;
         opacity: 0.5;
         // Hide the price
@@ -525,7 +527,7 @@ nav {
             padding: 0.25rem;
 
             position: relative;
-            left: 50%;
+            // left: 50%;
             font-size: 1rem;
             line-height: 1rem;
             color: $warning;
