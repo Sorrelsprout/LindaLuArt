@@ -621,6 +621,10 @@ nav .mobileMenu {
   background-image: url("../images/pots4/oregonGrape/oregonGrape1.jpg");
 }
 
+.columbiaLily .gallery .featuredImage {
+  background-image: url("../images/pots3.75/columbiaLily/columbiaLily1.jpg");
+}
+
 .pygmyBunStrawberries .gallery .featuredImage {
   background-image: url("../images/pots3.75/pygmyBunStrawberries/pygmyBunStrawberries.jpg");
 }
