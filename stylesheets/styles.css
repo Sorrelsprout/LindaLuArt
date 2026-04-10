@@ -157,8 +157,6 @@ nav a:hover {
 nav .mobileMenu {
   display: flex;
   gap: 2rem;
-  border-right: 1px solid #11151E;
-  border-bottom: 1px solid #11151E;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
@@ -171,6 +169,8 @@ nav .mobileMenu {
     left: 0;
     padding: 2rem;
     background: #161E2E;
+    border-right: 1px solid #11151E;
+    border-bottom: 1px solid #11151E;
     width: 100%;
     max-width: 10rem;
   }
@@ -195,11 +195,6 @@ nav .mobileMenu {
   font-size: 0.95rem;
   text-align: center;
   box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5333333333);
-}
-@media screen and (max-width: 768px) {
-  #announcement {
-    max-width: 26.75rem;
-  }
 }
 #announcement a {
   color: #7f94b9;

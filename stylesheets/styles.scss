@@ -142,8 +142,6 @@ nav {
     .mobileMenu {
         display: flex;
         gap: 2rem;
-        border-right: 1px solid $darkBlue;
-        border-bottom: 1px solid $darkBlue;
         z-index: 1;
         @media screen and (max-width: $mobileBreakpoint) { 
             display: none;
@@ -154,6 +152,8 @@ nav {
             left: 0;
             padding: $pageMargin;
             background: $medBlue;
+            border-right: 1px solid $darkBlue;
+            border-bottom: 1px solid $darkBlue;
             width: 100%;
             max-width: 10rem;
             &.expanded { display: flex; }
@@ -176,7 +176,7 @@ nav {
     font-size: 0.95rem;
     text-align: center;
     box-shadow: inset 0 0 1rem #0008;
-    @media screen and (max-width: $mobileBreakpoint) { max-width: 26.75rem; }
+    // @media screen and (max-width: $mobileBreakpoint) { max-width: 26.75rem; }
     a {
         color: $veryLightBlue;
         font-weight: 600;
