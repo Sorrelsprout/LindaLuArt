@@ -196,6 +196,11 @@ nav .mobileMenu {
   text-align: center;
   box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5333333333);
 }
+@media screen and (max-width: 633px) {
+  #announcement {
+    max-width: 26.75rem;
+  }
+}
 #announcement a {
   color: #7f94b9;
   font-weight: 600;
